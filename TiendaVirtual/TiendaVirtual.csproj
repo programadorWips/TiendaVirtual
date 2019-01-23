@@ -1,0 +1,442 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C779E66-DB2F-4707-8C0E-D03280BAE2A9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TiendaVirtual</RootNamespace>
+    <AssemblyName>TiendaVirtual</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPerfil.aspx" />
+    <Content Include="CSS\StyleSheetProductos.css" />
+    <Content Include="CSS\StyleSheetRegistro.css" />
+    <Content Include="CSS\StyleSheetCabezera.css" />
+    <Content Include="CSS\StyleSheetPortada.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="imagenes\20181127_140110.jpg" />
+    <Content Include="imagenes\Carrusel1.jpg" />
+    <Content Include="imagenes\Carrusel2.jpg" />
+    <Content Include="imagenes\Carrusel3.jpg" />
+    <Content Include="imagenes\fotoPerfil.jpg" />
+    <Content Include="imagenes\FotoRegistro.jpg" />
+    <Content Include="imagenes\iconoconocenos.png" />
+    <Content Include="imagenes\iconohelp.png" />
+    <Content Include="imagenes\iconohome.jpg" />
+    <Content Include="imagenes\iconologin.jpg" />
+    <Content Include="imagenes\iconoProductos.png" />
+    <Content Include="imagenes\iconosalir.png" />
+    <Content Include="imagenes\imgFooter.png" />
+    <Content Include="imagenes\laptopAlienware.jpg" />
+    <Content Include="imagenes\LaptopAsus.jpg" />
+    <Content Include="imagenes\laptophp.jpg" />
+    <Content Include="imagenes\logoAtomo.jpg" />
+    <Content Include="imagenes\LogoCabezera.jpg" />
+    <Content Include="imagenes\LogoCabezera3.jpg" />
+    <Content Include="imagenes\LogoCabezera4.jpg" />
+    <Content Include="imagenes\logoFooter.jpg" />
+    <Content Include="imagenes\pcAlienware.png" />
+    <Content Include="imagenes\pcGamer.jpg" />
+    <Content Include="imagenes\pcToshiba.jpg" />
+    <Content Include="imagenes\play4.jpg" />
+    <Content Include="imagenes\pspVita.jpg" />
+    <Content Include="imagenes\XboxOne.jpg" />
+    <Content Include="Iconos\build\build.css" />
+    <Content Include="Iconos\build\svg\alert.svg" />
+    <Content Include="Iconos\build\svg\archive.svg" />
+    <Content Include="Iconos\build\svg\arrow-both.svg" />
+    <Content Include="Iconos\build\svg\arrow-down.svg" />
+    <Content Include="Iconos\build\svg\arrow-left.svg" />
+    <Content Include="Iconos\build\svg\arrow-right.svg" />
+    <Content Include="Iconos\build\svg\arrow-small-down.svg" />
+    <Content Include="Iconos\build\svg\arrow-small-left.svg" />
+    <Content Include="Iconos\build\svg\arrow-small-right.svg" />
+    <Content Include="Iconos\build\svg\arrow-small-up.svg" />
+    <Content Include="Iconos\build\svg\arrow-up.svg" />
+    <Content Include="Iconos\build\svg\beaker.svg" />
+    <Content Include="Iconos\build\svg\bell.svg" />
+    <Content Include="Iconos\build\svg\bold.svg" />
+    <Content Include="Iconos\build\svg\book.svg" />
+    <Content Include="Iconos\build\svg\bookmark.svg" />
+    <Content Include="Iconos\build\svg\briefcase.svg" />
+    <Content Include="Iconos\build\svg\broadcast.svg" />
+    <Content Include="Iconos\build\svg\browser.svg" />
+    <Content Include="Iconos\build\svg\bug.svg" />
+    <Content Include="Iconos\build\svg\calendar.svg" />
+    <Content Include="Iconos\build\svg\check.svg" />
+    <Content Include="Iconos\build\svg\checklist.svg" />
+    <Content Include="Iconos\build\svg\chevron-down.svg" />
+    <Content Include="Iconos\build\svg\chevron-left.svg" />
+    <Content Include="Iconos\build\svg\chevron-right.svg" />
+    <Content Include="Iconos\build\svg\chevron-up.svg" />
+    <Content Include="Iconos\build\svg\circle-slash.svg" />
+    <Content Include="Iconos\build\svg\circuit-board.svg" />
+    <Content Include="Iconos\build\svg\clippy.svg" />
+    <Content Include="Iconos\build\svg\clock.svg" />
+    <Content Include="Iconos\build\svg\cloud-download.svg" />
+    <Content Include="Iconos\build\svg\cloud-upload.svg" />
+    <Content Include="Iconos\build\svg\code.svg" />
+    <Content Include="Iconos\build\svg\comment-discussion.svg" />
+    <Content Include="Iconos\build\svg\comment.svg" />
+    <Content Include="Iconos\build\svg\credit-card.svg" />
+    <Content Include="Iconos\build\svg\dash.svg" />
+    <Content Include="Iconos\build\svg\dashboard.svg" />
+    <Content Include="Iconos\build\svg\database.svg" />
+    <Content Include="Iconos\build\svg\desktop-download.svg" />
+    <Content Include="Iconos\build\svg\device-camera-video.svg" />
+    <Content Include="Iconos\build\svg\device-camera.svg" />
+    <Content Include="Iconos\build\svg\device-desktop.svg" />
+    <Content Include="Iconos\build\svg\device-mobile.svg" />
+    <Content Include="Iconos\build\svg\diff-added.svg" />
+    <Content Include="Iconos\build\svg\diff-ignored.svg" />
+    <Content Include="Iconos\build\svg\diff-modified.svg" />
+    <Content Include="Iconos\build\svg\diff-removed.svg" />
+    <Content Include="Iconos\build\svg\diff-renamed.svg" />
+    <Content Include="Iconos\build\svg\diff.svg" />
+    <Content Include="Iconos\build\svg\ellipsis.svg" />
+    <Content Include="Iconos\build\svg\eye.svg" />
+    <Content Include="Iconos\build\svg\file-binary.svg" />
+    <Content Include="Iconos\build\svg\file-code.svg" />
+    <Content Include="Iconos\build\svg\file-directory.svg" />
+    <Content Include="Iconos\build\svg\file-media.svg" />
+    <Content Include="Iconos\build\svg\file-pdf.svg" />
+    <Content Include="Iconos\build\svg\file-submodule.svg" />
+    <Content Include="Iconos\build\svg\file-symlink-directory.svg" />
+    <Content Include="Iconos\build\svg\file-symlink-file.svg" />
+    <Content Include="Iconos\build\svg\file-zip.svg" />
+    <Content Include="Iconos\build\svg\file.svg" />
+    <Content Include="Iconos\build\svg\flame.svg" />
+    <Content Include="Iconos\build\svg\fold.svg" />
+    <Content Include="Iconos\build\svg\gear.svg" />
+    <Content Include="Iconos\build\svg\gift.svg" />
+    <Content Include="Iconos\build\svg\gist-secret.svg" />
+    <Content Include="Iconos\build\svg\gist.svg" />
+    <Content Include="Iconos\build\svg\git-branch.svg" />
+    <Content Include="Iconos\build\svg\git-commit.svg" />
+    <Content Include="Iconos\build\svg\git-compare.svg" />
+    <Content Include="Iconos\build\svg\git-merge.svg" />
+    <Content Include="Iconos\build\svg\git-pull-request.svg" />
+    <Content Include="Iconos\build\svg\globe.svg" />
+    <Content Include="Iconos\build\svg\grabber.svg" />
+    <Content Include="Iconos\build\svg\graph.svg" />
+    <Content Include="Iconos\build\svg\heart.svg" />
+    <Content Include="Iconos\build\svg\history.svg" />
+    <Content Include="Iconos\build\svg\home.svg" />
+    <Content Include="Iconos\build\svg\horizontal-rule.svg" />
+    <Content Include="Iconos\build\svg\hubot.svg" />
+    <Content Include="Iconos\build\svg\inbox.svg" />
+    <Content Include="Iconos\build\svg\info.svg" />
+    <Content Include="Iconos\build\svg\issue-closed.svg" />
+    <Content Include="Iconos\build\svg\issue-opened.svg" />
+    <Content Include="Iconos\build\svg\issue-reopened.svg" />
+    <Content Include="Iconos\build\svg\italic.svg" />
+    <Content Include="Iconos\build\svg\jersey.svg" />
+    <Content Include="Iconos\build\svg\kebab-horizontal.svg" />
+    <Content Include="Iconos\build\svg\kebab-vertical.svg" />
+    <Content Include="Iconos\build\svg\key.svg" />
+    <Content Include="Iconos\build\svg\keyboard.svg" />
+    <Content Include="Iconos\build\svg\law.svg" />
+    <Content Include="Iconos\build\svg\light-bulb.svg" />
+    <Content Include="Iconos\build\svg\link-external.svg" />
+    <Content Include="Iconos\build\svg\link.svg" />
+    <Content Include="Iconos\build\svg\list-ordered.svg" />
+    <Content Include="Iconos\build\svg\list-unordered.svg" />
+    <Content Include="Iconos\build\svg\location.svg" />
+    <Content Include="Iconos\build\svg\lock.svg" />
+    <Content Include="Iconos\build\svg\logo-gist.svg" />
+    <Content Include="Iconos\build\svg\logo-github.svg" />
+    <Content Include="Iconos\build\svg\mail-read.svg" />
+    <Content Include="Iconos\build\svg\mail.svg" />
+    <Content Include="Iconos\build\svg\mark-github.svg" />
+    <Content Include="Iconos\build\svg\markdown.svg" />
+    <Content Include="Iconos\build\svg\megaphone.svg" />
+    <Content Include="Iconos\build\svg\mention.svg" />
+    <Content Include="Iconos\build\svg\milestone.svg" />
+    <Content Include="Iconos\build\svg\mirror.svg" />
+    <Content Include="Iconos\build\svg\mortar-board.svg" />
+    <Content Include="Iconos\build\svg\mute.svg" />
+    <Content Include="Iconos\build\svg\no-newline.svg" />
+    <Content Include="Iconos\build\svg\note.svg" />
+    <Content Include="Iconos\build\svg\octoface.svg" />
+    <Content Include="Iconos\build\svg\organization.svg" />
+    <Content Include="Iconos\build\svg\package.svg" />
+    <Content Include="Iconos\build\svg\paintcan.svg" />
+    <Content Include="Iconos\build\svg\pencil.svg" />
+    <Content Include="Iconos\build\svg\person.svg" />
+    <Content Include="Iconos\build\svg\pin.svg" />
+    <Content Include="Iconos\build\svg\plug.svg" />
+    <Content Include="Iconos\build\svg\plus-small.svg" />
+    <Content Include="Iconos\build\svg\plus.svg" />
+    <Content Include="Iconos\build\svg\primitive-dot.svg" />
+    <Content Include="Iconos\build\svg\primitive-square.svg" />
+    <Content Include="Iconos\build\svg\project.svg" />
+    <Content Include="Iconos\build\svg\pulse.svg" />
+    <Content Include="Iconos\build\svg\question.svg" />
+    <Content Include="Iconos\build\svg\quote.svg" />
+    <Content Include="Iconos\build\svg\radio-tower.svg" />
+    <Content Include="Iconos\build\svg\reply.svg" />
+    <Content Include="Iconos\build\svg\repo-clone.svg" />
+    <Content Include="Iconos\build\svg\repo-force-push.svg" />
+    <Content Include="Iconos\build\svg\repo-forked.svg" />
+    <Content Include="Iconos\build\svg\repo-pull.svg" />
+    <Content Include="Iconos\build\svg\repo-push.svg" />
+    <Content Include="Iconos\build\svg\repo.svg" />
+    <Content Include="Iconos\build\svg\report.svg" />
+    <Content Include="Iconos\build\svg\rocket.svg" />
+    <Content Include="Iconos\build\svg\rss.svg" />
+    <Content Include="Iconos\build\svg\ruby.svg" />
+    <Content Include="Iconos\build\svg\screen-full.svg" />
+    <Content Include="Iconos\build\svg\screen-normal.svg" />
+    <Content Include="Iconos\build\svg\search.svg" />
+    <Content Include="Iconos\build\svg\server.svg" />
+    <Content Include="Iconos\build\svg\settings.svg" />
+    <Content Include="Iconos\build\svg\shield.svg" />
+    <Content Include="Iconos\build\svg\sign-in.svg" />
+    <Content Include="Iconos\build\svg\sign-out.svg" />
+    <Content Include="Iconos\build\svg\smiley.svg" />
+    <Content Include="Iconos\build\svg\squirrel.svg" />
+    <Content Include="Iconos\build\svg\star.svg" />
+    <Content Include="Iconos\build\svg\stop.svg" />
+    <Content Include="Iconos\build\svg\sync.svg" />
+    <Content Include="Iconos\build\svg\tag.svg" />
+    <Content Include="Iconos\build\svg\tasklist.svg" />
+    <Content Include="Iconos\build\svg\telescope.svg" />
+    <Content Include="Iconos\build\svg\terminal.svg" />
+    <Content Include="Iconos\build\svg\text-size.svg" />
+    <Content Include="Iconos\build\svg\three-bars.svg" />
+    <Content Include="Iconos\build\svg\thumbsdown.svg" />
+    <Content Include="Iconos\build\svg\thumbsup.svg" />
+    <Content Include="Iconos\build\svg\tools.svg" />
+    <Content Include="Iconos\build\svg\trashcan.svg" />
+    <Content Include="Iconos\build\svg\triangle-down.svg" />
+    <Content Include="Iconos\build\svg\triangle-left.svg" />
+    <Content Include="Iconos\build\svg\triangle-right.svg" />
+    <Content Include="Iconos\build\svg\triangle-up.svg" />
+    <Content Include="Iconos\build\svg\unfold.svg" />
+    <Content Include="Iconos\build\svg\unmute.svg" />
+    <Content Include="Iconos\build\svg\unverified.svg" />
+    <Content Include="Iconos\build\svg\verified.svg" />
+    <Content Include="Iconos\build\svg\versions.svg" />
+    <Content Include="Iconos\build\svg\watch.svg" />
+    <Content Include="Iconos\build\svg\x.svg" />
+    <Content Include="Iconos\build\svg\zap.svg" />
+    <Content Include="Iconos\index.js" />
+    <Content Include="Portada.aspx" />
+    <Content Include="imagenes\Portada.jpg" />
+    <Content Include="ProductosLogin.aspx" />
+    <Content Include="Registro.aspx" />
+    <Content Include="UsuarioPerfil.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPerfil.aspx.cs">
+      <DependentUpon>AdminPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPerfil.aspx.designer.cs">
+      <DependentUpon>AdminPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CabezeraMenu.Master.cs">
+      <DependentUpon>CabezeraMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CabezeraMenu.Master.designer.cs">
+      <DependentUpon>CabezeraMenu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logiado.Master.cs">
+      <DependentUpon>Logiado.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logiado.Master.designer.cs">
+      <DependentUpon>Logiado.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Portada.aspx.cs">
+      <DependentUpon>Portada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portada.aspx.designer.cs">
+      <DependentUpon>Portada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosLogin.aspx.cs">
+      <DependentUpon>ProductosLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductosLogin.aspx.designer.cs">
+      <DependentUpon>ProductosLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioPerfil.aspx.cs">
+      <DependentUpon>UsuarioPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioPerfil.aspx.designer.cs">
+      <DependentUpon>UsuarioPerfil.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="CabezeraMenu.Master" />
+    <Content Include="Logiado.Master" />
+    <Content Include="CSS\StyleSheetPerfil.css" />
+    <None Include="packages.config" />
+    <Content Include="Iconos\build\data.json" />
+    <Content Include="Iconos\index.scss" />
+    <Content Include="Iconos\LICENSE" />
+    <Content Include="Iconos\package.json" />
+    <Content Include="Iconos\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="JavaScript\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51737</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51737/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

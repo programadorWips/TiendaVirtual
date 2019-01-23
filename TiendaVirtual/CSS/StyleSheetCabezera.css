@@ -1,0 +1,38 @@
+﻿.cabezera {
+    background-color: #212529;
+}
+
+.miImgCabezera{
+    margin-left : 31%;
+    height : 9em;
+    width : 30%;
+}
+
+.nav-item{
+    margin-left : 4%;
+    margin-right : 4%;
+}
+
+.imgCarru{
+    height : 39em;
+}
+
+.miFooter{
+    background-color: rgb(17,17,17);
+}
+
+.milogoFooter{
+    height : 5em;
+}
+
+.list-group-item{
+    background-color: rgb(17,17,17) !important;
+    border-bottom: #f1f1f1 solid 1px !important;
+    color: aliceblue !important;
+}
+
+.list-group-item a {
+    color: aliceblue !important;
+
+}
+

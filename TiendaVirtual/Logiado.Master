@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Logiado.master.cs" Inherits="TiendaVirtual.Logiado" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Tienda Virtual Wips</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/StyleSheetCabezera.css" />
+    <link rel="stylesheet" href="CSS/StyleSheetRegistro.css" />
+    <link rel="stylesheet" href="CSS/StyleSheetPerfil.css" />
+    <link rel="stylesheet" href="CSS/StyleSheetProductos.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+
+            <div class="jumbotron-fluid cabezera">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <a class="navbar-brand" href="#">Wips</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item active">
+                    
+                      </li>
+                      <li class="nav-item">
+                        <asp:Menu ID="Menu1" CssClass="nav-link" runat="server" ForeColor="White" Font-Size="Larger" DynamicSelectedStyle-ForeColor="#00CC00" StaticMenuStyle-ForeColor="#00CC00" StaticHoverStyle-ForeColor="#00CC00">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/home.aspx" Text="Home" Value="InicioMenu" ImageUrl="~/imagenes/iconohome.jpg"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                      </li>
+                      <li class="nav-item"> 
+                        <asp:Menu ID="Menu2" CssClass="nav-link" runat="server" ForeColor="White" Font-Size="Larger" DynamicSelectedStyle-ForeColor="#00CC00" StaticMenuStyle-ForeColor="#00CC00" StaticHoverStyle-ForeColor="#00CC00">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/help.aspx" Text="Help" ImageUrl="~/imagenes/iconohelp.png" Value="helpMenu"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                      </li>
+                        <li class="nav-item">
+                        <asp:Menu ID="Menu3" CssClass="nav-link" runat="server" ForeColor="White" Font-Size="Larger" DynamicSelectedStyle-ForeColor="#00CC00" StaticMenuStyle-ForeColor="#00CC00" StaticHoverStyle-ForeColor="#00CC00">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/ProductosLogin.aspx" Text="Productos" ImageUrl="~/imagenes/iconoProductos.png" Value="ProducnMenu"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                        </li>
+                        <li class="nav-item">
+                            <asp:Menu ID="Menu4" CssClass="nav-link" runat="server" ForeColor="White" Font-Size="Larger" Font-Italic="True" DynamicSelectedStyle-ForeColor="#00CC00" StaticMenuStyle-ForeColor="#00CC00" StaticHoverStyle-ForeColor="#00CC00">
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/Registro.aspx" Text="Registro" ImageUrl="~/imagenes/iconoconocenos.png" Value="NosotrosnMenu"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </li>
+                      <li class="nav-item">
+                          <asp:Menu ID="MenuLogout" CssClass="nav-link" runat="server" ForeColor="White" Font-Size="Larger" Font-Italic="True" DynamicSelectedStyle-ForeColor="#00CC00" StaticMenuStyle-ForeColor="#00CC00" StaticHoverStyle-ForeColor="#00CC00" OnMenuItemClick="MenuLogout_MenuItemClick">
+                            <Items>
+                                <asp:MenuItem Text="Logout" ImageUrl="~/imagenes/iconosalir.png" Value="NosotrosnMenu"></asp:MenuItem>
+                            </Items>
+                          </asp:Menu>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+
+                <img src="imagenes/LogoCabezera3.jpg" class="img-fluid miImgCabezera" />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100 imgCarru" src="imagenes/Carrusel1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100 imgCarru" src="imagenes/Carrusel2.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100 imgCarru" src="imagenes/Carrusel3.jpg" alt="Third slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Atras</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguente</span>
+                      </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div> 
+
+            <div class="row miFooter">
+                <div class="col-md-12">
+                    <img src="imagenes/logoFooter.jpg" class="img-thumbnail milogoFooter" width="250" />
+                    <asp:Label runat="server" ID="nombrepie" Text="Gracias Por Estar Con Nosotros W.I.P.S" CssClass="text-center" ForeColor="#FFFFCC" Width="100%"></asp:Label>
+                    <asp:Button runat="server" CssClass="float-right btn btn-lg btn-dark" Text="Subir" />
+                    <hr style="background-color: #C0C0C0" />
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center">Soporte</li>
+                      <li class="list-group-item"><a href="#">04121093622</a></li>
+                      <li class="list-group-item"><a href="#">Trucos.naipes@gmail.com</a></li>
+                      <li class="list-group-item"><a href="#">TT_t@twiwi.tw</a></li>
+                      <li class="list-group-item"><a href="#">www.Construccion.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center">Patherns</li>
+                      <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
+                      <li class="list-group-item"><a href="#">Morbi leo risus</a></li>
+                      <li class="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
+                      <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item text-center">Desarrolladores</li>
+                      <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
+                      <li class="list-group-item"><a href="#">Morbi leo risus</a></li>
+                      <li class="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
+                      <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </form>
+</body>
+</html>

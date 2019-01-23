@@ -1,0 +1,16 @@
+﻿body {
+}
+
+.micontenido{
+    padding-top : 2em;
+    padding-bottom : 2em;
+}
+
+.cd-header {
+    background-color: #14B76E;
+    color: aliceblue;
+}
+
+.micard {
+    border: solid 1em #14B76E;
+}
